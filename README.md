@@ -89,17 +89,13 @@ Particle filter algorithm uses particles to represent the location of vehicle. H
    
 ## Project Output
 
-Particle filter implemented was run on Udacity's simulator and its error and performance was noted. Below are the results with 10 and 20 particles respectively:
+Particle filter implemented was run on Udacity's simulator and its error and performance was noted. Below are the results:
 
   **Run 1: 10 particles**
   
-![particle-filter-10-particles](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/particle-filter-pass-10-particles.png)
+![particle-filter-10-particles](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/Passed.png)
 
-  **Run 2: 20 particles**
-  
-![particle-filter-20-particles](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/particle-filter-pass-20-particles.png)
-
-In both the runs, implementation was declared as pass since the error and the execution time of code was in permissible limits.
+Implementation was declared as pass since the error and the execution time of code was in permissible limits.
 
 
 ## Steps for building the project
