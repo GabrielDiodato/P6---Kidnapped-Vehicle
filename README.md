@@ -35,7 +35,7 @@ In this project, a vehicle is kidnapped inside a closed environment and has no i
 
 Each major step involved in implementation is illustrated below:
 
-![Particle Filter Localization Algorithm](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/particle-filter-localization-algorithm.png)
+![Particle Filter Localization Algorithm](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/particle-filter-localization-algorithm.png)
 
 The C++ program for localization was implemented using following major steps:
 
@@ -46,7 +46,7 @@ Particle filter algorithm uses particles to represent the location of vehicle. H
   
   3. Once map and particles are initialized, the vehicle implements **Prediction** step in which the location of each particle at next time step is predicted. This is done by using information of control inputs and time elapsed between time steps. The control inputs are nothing but magnitude of velocity (v) and yaw rate (θ). Location update is done with the help of formula given below:
   
-![prediction-equations](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/prediction-equations.png)
+![prediction-equations](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/prediction-equations.png)
   
   4. After prediction step, the vehicle implements **Update** step. In this step, particles are assigned with weights corresponding to their prediction. The process is stated below:
   
@@ -56,13 +56,13 @@ Particle filter algorithm uses particles to represent the location of vehicle. H
   
    Here, X axis is in the direction of motion of the vehicle and Y axis is perpendicular to X axis to the left.
   
-![Global map coordinate axes](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/global-map-axes-definition.png)
+![Global map coordinate axes](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/robot_axes_definition.png)
 
    The landmarks are shown with annotations L1-L5. Observations recorded in vehicle's coordinates are annotated OBS1-OBS3. The ground truth of vehicle is shown in red while the prediction of location vehicle as derived by the particle is shown in blue.
   
    b. To map the observations into global coordinate system, a transformation is done involving translation and rotation but no scaling. This is done by using Homogenous Coordinate Transformation given by the formula below:
     
-![Homogenous Coordinate Transformation](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/homogenous-coordinate-transformation.png)
+![Homogenous Coordinate Transformation](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/homogenous-coordinate-transformation.png)
 
   where xm, ym represent the transformed observation, xc, yc represent the observations in vehicle's coordinate system and xp, yp the location of particle in global map coordinate system.
   
@@ -72,7 +72,7 @@ Particle filter algorithm uses particles to represent the location of vehicle. H
     
    e. Once every observation is associated to a landmark, weight of the particle is calculated by using Multivariate Gaussian distribution. Since all observations are independent, the total weight of the particle is the product of probabilities calculated by Multivariate Gaussian formula for all observations associated to landmarks. Formula for calculation of individual probabilities is given below:
     
-![Multivariate Gaussian Probability](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/multivariate-gaussian-probability.png)
+![Multivariate Gaussian Probability](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/multivariate-gaussian-probability.png)
 
    where x and y is the observation and µx and µy are the coordinates of associated landmark. The final weight of particle is product of all probabilities.
    
@@ -90,10 +90,8 @@ Particle filter algorithm uses particles to represent the location of vehicle. H
 ## Project Output
 
 Particle filter implemented was run on Udacity's simulator and its error and performance was noted. Below are the results:
-
-  **Run 1: 10 particles**
   
-![particle-filter-10-particles](https://raw.githubusercontent.com/sohonisaurabh/CarND-Kidnapped-Vehicle-Project/master/image-resources/Passed.png)
+![particle-filter-10-particles](https://github.com/GabrielDiodato/P6---Kidnapped-Vehicle/blob/master/image-resources/Passed.PNG)
 
 Implementation was declared as pass since the error and the execution time of code was in permissible limits.
 
